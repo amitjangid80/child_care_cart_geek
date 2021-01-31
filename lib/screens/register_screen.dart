@@ -53,9 +53,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 isDense: true,
                                 labelText: kParentName,
                                 suffixIcon: Image(width: 10, height: 15, image: AssetImage(kUserIcon)),
+                                suffixIconConstraints: BoxConstraints(
+                                  minWidth: 14,
+                                  maxWidth: 14,
+                                  minHeight: 14,
+                                  maxHeight: 14,
+                                ),
                               ),
                             ),
-                            const SizedBox(height: 10),
+                            const SizedBox(height: 20),
                             TextField(
                               autofocus: false,
                               autocorrect: false,
@@ -67,6 +73,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               decoration: InputDecoration(
                                 labelText: kMobileNumber,
                                 suffixIcon: Image(width: 10, height: 15, image: AssetImage(kPhoneIcon)),
+                                suffixIconConstraints: BoxConstraints(
+                                  minWidth: 24,
+                                  maxWidth: 24,
+                                  minHeight: 24,
+                                  maxHeight: 24,
+                                ),
                               ),
                             ),
                             const SizedBox(height: 10),
@@ -77,6 +89,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               decoration: InputDecoration(
                                 labelText: kEmailId,
                                 suffixIcon: Image(width: 10, height: 15, image: AssetImage(kEmailIcon)),
+                                suffixIconConstraints: BoxConstraints(
+                                  minWidth: 14,
+                                  maxWidth: 14,
+                                  minHeight: 14,
+                                  maxHeight: 14,
+                                ),
                               ),
                             ),
                             const SizedBox(height: 10),

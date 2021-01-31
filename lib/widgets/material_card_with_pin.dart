@@ -19,8 +19,8 @@ class MaterialCardWithPin extends StatelessWidget {
         children: [
           Container(
             child: child,
-            margin: const EdgeInsets.only(top: 40, left: 20, right: 20),
-            padding: const EdgeInsets.only(top: 80, left: 30, right: 30, bottom: 40),
+            margin: const EdgeInsets.only(top: 40, left: 16, right: 16),
+            padding: const EdgeInsets.only(top: 80, left: 20, right: 20, bottom: 40),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),

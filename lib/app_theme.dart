@@ -53,6 +53,6 @@ InputDecorationTheme _inputDecorationTheme() {
     enabledBorder: _underlineInputBorder,
     focusedBorder: _underlineInputBorder,
     disabledBorder: _underlineInputBorder,
-    contentPadding: const EdgeInsets.only(left: 8, right: 0),
+    contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
   );
 }

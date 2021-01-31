@@ -10,15 +10,15 @@ class YourCurrentBooking extends StatelessWidget {
     return Column(
       children: [
         Container(
-          margin: const EdgeInsets.only(left: 30, right: 30),
+          margin: const EdgeInsets.only(left: 20, right: 20),
           child: Text(
             kYourCurrentBooking,
             style: Theme.of(context).textTheme.headline6.copyWith(color: kTextColor),
           ),
         ),
         Container(
-          padding: const EdgeInsets.all(15),
-          margin: const EdgeInsets.only(top: 20, left: 30, right: 30),
+          padding: const EdgeInsets.all(10),
+          margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),

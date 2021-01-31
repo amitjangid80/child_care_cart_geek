@@ -24,13 +24,16 @@ class DrawerData extends StatelessWidget {
               shrinkWrap: true,
               itemCount: drawerItemList.length,
               physics: const NeverScrollableScrollPhysics(),
-              separatorBuilder: (context, _position) => const Divider(),
+              separatorBuilder: (context, _position) => const Divider(height: 1),
               itemBuilder: (context, _position) {
                 DrawerItem _drawerItem = drawerItemList[_position];
 
                 return Container(
-                  padding: const EdgeInsets.all(10),
-                  child: Text(_drawerItem.name, style: Theme.of(context).textTheme.headline6.copyWith(color: kTextColor)),
+                  padding: const EdgeInsets.all(12),
+                  child: Text(
+                    _drawerItem.name,
+                    style: Theme.of(context).textTheme.bodyText1.copyWith(fontSize: 16, color: kTextColor),
+                  ),
                 );
               },
             ),

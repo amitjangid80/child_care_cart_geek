@@ -44,6 +44,12 @@ class LoginScreen extends StatelessWidget {
                                 isDense: true,
                                 labelText: kMobileNumber,
                                 suffixIcon: Image(width: 10, height: 15, image: AssetImage(kPhoneIcon)),
+                                suffixIconConstraints: BoxConstraints(
+                                  minWidth: 24,
+                                  maxWidth: 24,
+                                  minHeight: 24,
+                                  maxHeight: 24,
+                                ),
                               ),
                             ),
                             const SizedBox(height: 40),

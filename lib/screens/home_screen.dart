@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   child: Scaffold(
                     bottomNavigationBar: BottomNavigationWidget(),
                     appBar: PreferredSize(
-                      preferredSize: Size.fromHeight(kToolbarHeight),
+                      preferredSize: Size.fromHeight(72),
                       child: Container(
                         padding: EdgeInsets.only(top: 36, left: 12, right: 12, bottom: 12),
                         child: Column(

@@ -8,7 +8,7 @@ class NannyAndBabySittingService extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 10, left: 30),
+      margin: const EdgeInsets.only(top: 10, left: 20),
       child: Stack(
         children: [
           Container(
