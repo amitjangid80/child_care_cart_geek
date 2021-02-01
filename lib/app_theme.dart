@@ -12,6 +12,7 @@ const kLightBlueColor = Color(0xFF80ABDB);
 
 const kGreyColor = Color(0xFFCCCCCC);
 const kDarkGreyColor = Color(0xFF707070);
+const kBlackishColor = Color(0xFF5C5C5C);
 
 ThemeData themeData() {
   return ThemeData(

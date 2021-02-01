@@ -55,6 +55,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
                   child: Scaffold(
+                    // bottom navigation widget
                     bottomNavigationBar: BottomNavigationWidget(),
                     appBar: PreferredSize(
                       preferredSize: Size.fromHeight(72),

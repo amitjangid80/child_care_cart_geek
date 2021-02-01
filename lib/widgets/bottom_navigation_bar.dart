@@ -28,7 +28,7 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
             (index) {
               BottomItem _bottomItem = bottomItemList[index];
 
-              Color _selectedColor = (_currentIndex == index) ? kPrimaryColor : Colors.black;
+              Color _selectedColor = (_currentIndex == index) ? kPrimaryColor : kBlackishColor;
               Color _selectedIconColor = (_currentIndex == index) ? kPrimaryColor : Colors.white;
 
               return InkWell(
