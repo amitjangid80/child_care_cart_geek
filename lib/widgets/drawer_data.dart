@@ -6,6 +6,10 @@ import 'package:ui_sample/models/drawer_item.dart';
 import 'package:ui_sample/utils/constants.dart';
 
 class DrawerData extends StatelessWidget {
+  final AnimationController animationController;
+
+  DrawerData({@required this.animationController});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,11 +32,16 @@ class DrawerData extends StatelessWidget {
               itemBuilder: (context, _position) {
                 DrawerItem _drawerItem = drawerItemList[_position];
 
-                return Container(
-                  padding: const EdgeInsets.all(12),
-                  child: Text(
-                    _drawerItem.name,
-                    style: Theme.of(context).textTheme.bodyText1.copyWith(fontSize: 16, color: kTextColor),
+                return InkWell(
+                  onTap: () {
+                    animationController.isDismissed ? animationController.forward() : animationController.reverse();
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.all(12),
+                    child: Text(
+                      _drawerItem.name,
+                      style: Theme.of(context).textTheme.bodyText1.copyWith(fontSize: 16, color: kTextColor),
+                    ),
                   ),
                 );
               },

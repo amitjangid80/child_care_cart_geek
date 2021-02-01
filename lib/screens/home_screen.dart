@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
         return Stack(
           children: [
-            Scaffold(body: DrawerData(), backgroundColor: Colors.white),
+            Scaffold(backgroundColor: Colors.white, body: DrawerData(animationController: _animationController)),
             Transform(
               alignment: Alignment.center,
               transform: Matrix4.identity()
