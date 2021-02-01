@@ -58,51 +58,44 @@ class YourCurrentBooking extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    height: 26,
-                    child: RaisedButton.icon(
-                      onPressed: () {},
-                      color: kTextColor,
-                      padding: const EdgeInsets.only(left: 5, right: 10),
-                      icon: Image(width: 16, height: 16, color: Colors.white, image: AssetImage(kStarIcon)),
-                      label: Text(
-                        kRateUs,
-                        style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 12, color: Colors.white),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    height: 26,
-                    child: RaisedButton.icon(
-                      onPressed: () {},
-                      color: kTextColor,
-                      padding: const EdgeInsets.only(left: 5, right: 10),
-                      icon: Image(width: 16, height: 16, color: Colors.white, image: AssetImage(kLocationPinIcon)),
-                      label: Text(
-                        kGeoLocation,
-                        style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 12, color: Colors.white),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    height: 26,
-                    child: RaisedButton.icon(
-                      onPressed: () {},
-                      color: kTextColor,
-                      padding: const EdgeInsets.only(left: 5, right: 10),
-                      icon: Image(width: 16, height: 16, color: Colors.white, image: AssetImage(kRadioIcon)),
-                      label: Text(
-                        kSurveillance,
-                        style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 12, color: Colors.white),
-                      ),
-                    ),
-                  ),
+                  _CustomButton(icon: kStarIcon, text: kRateUs),
+                  _CustomButton(icon: kLocationPinIcon, text: kGeoLocation),
+                  _CustomButton(icon: kRadioIcon, text: kSurveillance),
                 ],
               ),
             ],
           ),
         ),
       ],
+    );
+  }
+}
+
+class _CustomButton extends StatelessWidget {
+  final String icon, text;
+
+  _CustomButton({@required this.icon, @required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 26,
+      padding: const EdgeInsets.symmetric(horizontal: 8),
+      decoration: BoxDecoration(
+        color: kTextColor,
+        borderRadius: BorderRadius.circular(30),
+        boxShadow: [BoxShadow(color: kGreyColor, blurRadius: 10, spreadRadius: 0.5)],
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Image(width: 10, height: 10, image: AssetImage(icon)),
+          const SizedBox(width: 5),
+          Text(text, style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 12, color: Colors.white)),
+        ],
+      ),
     );
   }
 }

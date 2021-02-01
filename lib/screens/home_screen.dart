@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:ui_sample/app_theme.dart';
-import 'package:ui_sample/utils/constants.dart';
 import 'package:ui_sample/widgets/all_packges.dart';
 import 'package:ui_sample/widgets/bottom_navigation_bar.dart';
 import 'package:ui_sample/widgets/drawer_data.dart';
@@ -31,12 +30,12 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
   @override
   Widget build(BuildContext context) {
-    final rightSlide = MediaQuery.of(context).size.width * 0.6;
+    final _rightSlide = MediaQuery.of(context).size.width * 0.6;
 
     return AnimatedBuilder(
       animation: _animationController,
       builder: (context, child) {
-        double _slide = rightSlide * _animationController.value;
+        double _slide = _rightSlide * _animationController.value;
         double _scale = 1 - (_animationController.value * 0.3);
 
         return Stack(
@@ -59,15 +58,18 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                     appBar: PreferredSize(
                       preferredSize: Size.fromHeight(72),
                       child: Container(
-                        padding: EdgeInsets.only(top: 36, left: 12, right: 12, bottom: 12),
+                        padding: EdgeInsets.only(top: 36, left: 12, right: 12, bottom: 0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             IconButton(
                               onPressed: () => _toggleAnimation(),
-                              icon: Image(image: AssetImage(kHamBurgerIcon)),
-                              // icon: AnimatedIcon(icon: AnimatedIcons.menu_close, progress: _animationController),
+                              icon: AnimatedIcon(
+                                color: kPrimaryColor,
+                                icon: AnimatedIcons.menu_close,
+                                progress: _animationController,
+                              ),
                             ),
                           ],
                         ),
