@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ui_sample/app_theme.dart';
+import 'package:ui_sample/utils/constants.dart';
 import 'package:ui_sample/widgets/all_packges.dart';
 import 'package:ui_sample/widgets/bottom_navigation_bar.dart';
 import 'package:ui_sample/widgets/drawer_data.dart';
@@ -49,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  boxShadow: [BoxShadow(color: kGreyColor, blurRadius: 10, spreadRadius: 0.5)],
+                  boxShadow: [BoxShadow(color: kGreyColor, blurRadius: 10, spreadRadius: 1)],
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
@@ -58,18 +59,15 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                     appBar: PreferredSize(
                       preferredSize: Size.fromHeight(72),
                       child: Container(
-                        padding: EdgeInsets.only(top: 36, left: 12, right: 12, bottom: 0),
+                        alignment: Alignment.centerRight,
+                        padding: EdgeInsets.only(top: 36, left: 12, right: 12),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             IconButton(
                               onPressed: () => _toggleAnimation(),
-                              icon: AnimatedIcon(
-                                color: kPrimaryColor,
-                                icon: AnimatedIcons.menu_close,
-                                progress: _animationController,
-                              ),
+                              icon: Image(image: AssetImage(kHamBurgerIcon)),
                             ),
                           ],
                         ),
